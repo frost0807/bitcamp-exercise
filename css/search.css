@@ -1,0 +1,5 @@
+header{display:flex;justify-content:center;margin:50px 0 150px 0;}
+section{display:flex;justify-content:space-evenly;}
+section div h1{font-size:30px;text-align:center;}
+section div form input{border:none;width:300px;height:50px;margin-bottom:20px;}
+#submit_button{font-size:18px;color:white;background-color:rgb(255, 145, 0);border-radius:10px;}
