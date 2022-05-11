@@ -1,0 +1,17 @@
+js -> .write(); : 화면에 출력하는 함수(HTML을 삭제하고 새로쓰기 때문에 잘 쓰지 않는다.)
+js -> 이중배열 : var 변수명 = [[a, b, c], [1, 2, 3], [aa, 11, 22]] 같은식으로 바로 선언과 할당 가능
+js -> '<p>' 같은 식으로 js내에서 html 태그를 그대로 쓸 수 있다.
+js -> 테이블 출력하기 :
+document.write("<table>");
+            for(var row=0;row<5;row++)
+            {
+                document.write("<tr>");
+                for(var col=0;col<3;col++)
+                {
+                    document.write("<td>");
+                    document.write((row+1)+'행'+(col+1)+'열');
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+            }        
+        document.wrtie("</table>")
