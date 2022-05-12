@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script defer type="text/javascript" src="script/user_info.js?ver=1"></script>
+    <script defer type="text/javascript" src="script/find_id.js?ver=1"></script>
+    <script defer type="text/javascript" src="script/find_pw.js?ver=1"></script>
+    <script defer type="text/javascript" src="script/delete.js?ver=1"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png">
+    </header>
+    <section>
+        <div>
+            <h1>아이디 찾기</h1><br>
+            <form method="POST" action="" onsubmit="find_id()">
+                <input type="text" name="user_name" id="user_name_1" placeholder="이름 입력"><br>
+                <input type="text" name="user_phone" id="user_phone_1" placeholder="휴대폰 번호(숫자만입력)"><br>
+                <input type="submit" id="submit_button" value="검색"><br>
+                <a href="register.html"><input type="button" value="회원가입"></a>
+            </form>
+        </div>
+        <div>
+            <h1>비밀번호 찾기</h1><br>
+            <form method="POST" action="" onsubmit="find_pw()">
+                <input type="text" name="user_id" id="user_id_1" placeholder="아이디 입력"><br>
+                <input type="mail" name="user_mail" id="user_mail_1" placeholder="메일주소 입력"><br>
+                <input type="submit" id="submit_button" value="검색">
+            </form>
+        </div>
+        <div>
+            <h1>정보 삭제하기</h1><br>
+            <form method="POST" action="" onsubmit="delete_user()">
+                <input type="text" name="user_id" id="user_id_2" placeholder="삭제할 아이디 입력해주세요"><br>
+                <input type="password" name="user_pw" id="user_pw_1" placeholder="삭제할 아이디의 비밀번호 입력"><br>
+                <input type="submit" id="submit_button" value="삭제하기">
+            </form>
+        </div>
+    </section>
+</body>
+</html>
