@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer type="text/javascript" src="script/jquery-3.6.0.min.js?ver=1"></script>
+    <script defer type="text/javascript" src="script/product.js?ver=1"></script>
+    <script defer type="text/javascript" src="script/product_jq.js?ver=1"></script>
+    <style>
+        p{display:inline;}
+        input{margin:5px 0px 5px 0px;height:20px;font-size:15px;}
+        #id_submit{height:25px;}
+        .cl_button{height:25px;font-size:15px;}
+        .menu_button{height:30px;font-size:20px;margin:10px 0 10px 0;}
+        table{text-align:center;}
+        table tr td{padding:0 10px 0 10px;}
+        h3{margin:5px 0 5px 0;}
+        section, #menu_hide{display:none;}
+        form{margin:0 30px 0 30px;}
+    </style>
+    <title>재고 관리 페이지</title>
+</head>
+<body>
+    <header>
+        <h1>재고 관리 페이지 입니다</h1>
+    </header>
+    <div>
+        <input type="button" class="menu_button"  id="menu_show" value="메뉴보기">
+        <input type="button" class="menu_button"  id="menu_hide" value="메뉴감추기">
+    </div>
+    <section>
+        <form action="" id="form_1" onsubmit="return product_register()">
+            <h3>상품 등록</h3>
+            <input type="text" id="id_product" placeholder="상품명"><br>
+            <input type="text" id="id_price" placeholder="상품 가격"><br>
+            <input type="number" id="id_stock" placeholder="재고"><br>
+            <p>제조사 :</p>
+            <input type="radio" id="id_nong" name="n_maker" value="농심">
+            <label for="id_nong">농심</label>
+            <input type="radio" id="id_ott" name="n_maker" value="오뚜기">
+            <label for="id_ott">오뚜기</label>
+            <input type="radio" id="id_pal" name="n_maker" value="팔도">
+            <label for="id_pal">팔도</label>
+            <input type="radio" id="id_sam" name="n_maker" value="삼양">
+            <label for="id_sam">삼양</label><br>
+            <label for="id_due">유통기한 :</label>
+            <input type="date" id="id_due"><br>
+            <input type="submit" id="id_submit" value="등록하기">
+        </form><br>
+        <form action="" id="form_2" onsubmit="return false">
+            <h3>상품 검색</h3>
+            <input type="text" id="id_search" placeholder="검색할 상품명"><br>
+            <input type="button" class="cl_button" onclick="document.getElementById('display').innerHTML=search_product()" value="검색하기">
+        </form><br>
+        <form action="" id="form_3" onsubmit="return false">
+            <h3>유통기한 임박 상품 검색</h3>
+            <label for >오늘 날짜를 입력해주세요</label><br>
+            <input type="date" id="due_check"><br>
+            <input type="button" class="cl_button" onclick="document.getElementById('display').innerHTML=check_due_date()" value="검색하기">
+        </form>
+        <div>            
+            <p id="display"></p>
+        </div>
+    </section>
+</body>
+</html>

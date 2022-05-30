@@ -1,0 +1,65 @@
+js
+radio값 체크했는지 아는 법 : document.querySelector('input[name="라디오name"]').checked;
+radio의 값 받는법 : document.querySelector('input[name="라디오name"]:checked').value
+input 속성 date의 값 받는법 : document.querySelector('#date아이디').value
+
+
+
+
+[---HashMap과 TreeMap---]
+
+Map을 구현한 컬렉션
+->데이터를 키와 값으로 쌍으로 저장, 키는 중복 불가, 값은 허용
+
+HashMap
+-> Map : 인터페이스를 구현한 대표적인 컬렉션 클래스
+-> HashMap(동기화X) : Hashtable(동기화)의 신버전
+-> 순서를 유지하려면, LinkedHashMap클래스를 사용하면 된다
+
+TreeMap
+->TreeSet이 TreeMap으로 구현한것이기 때문에 둘은 비슷한 속성을 가지고 있음
+-> 정렬과 범위검색에 유리한 컬렉션 클래스
+-> HashMap보다 데이터 추가, 삭제에 시간이 더 걸림
+
+HashMap
+-> 해싱(hashing)기법으로 데이터를 저장, 데이터가 많아도 검색이 빠르다
+-> Map인터페이스를 구현, 데이터를 키와 값의 쌍으로 저장
+
+주요메소드
+HashMap() : HashMap객체를 생성
+HashMap(int initialCapacity) : 지정된 값을 초기용량으로 하는 HashMap객체를 생성
+HashMap(int initialCapacity, lofat loadFactor) : 지정된 초기용량과 loadfactor의 HashMap객체를 생성
+HashMap(Map m) : 지정된 Map의 모든 요소를 포함하는 HashMap을 생성
+Object put(Object key, Object value) : 지정된 키와 값을 HashMap에 저장
+void putAll(Map m) : Map에 저장된 모든 요소를 HashMap에 저장
+Object remove(Object key) : HashMap에서 지정된 키로 저장된 값(객체)를 제거
+Object replace(Object ket, Object value) : 지정된 키의 값을 지정된 객체(value)로 대체
+boolean replace(Object key, Object oldVal, Object newVal) : 지정된 키와 객체(oldVal)가 모두 일치하는 경우에만 새로운 객체(newVal)로 대체
+boolean containsKey(Obejct key) : HashMap에 지정된 키가 포함되어 있는지 알려준다(있으면 true)
+boolean containsvalue(Object value) : HashMap에 지정된 값이 포함되어 있는지 알려준다(있으면 true)
+Object get(Object key) : 지정된 키의 값을 리턴, 못찾으면 null리턴
+Object getOrDefault(Object key, Object defaultValue) : 지정된 키(key)의 값을 리턴, 키를 못찾으면 기본값(defaultValue)로 지정된 객체를 리턴
+Set entrySet() : HashMap에 저장된 키와 값을 엔트리(키와 값의 결합)의 형태로 Set에 저장해서 리턴
+Set keySet() : HashMap에 저장된 모든 키가 저장된 Set을 리턴
+Collection values() : HashMap에 저장된 모든 값을 컬렉션의 형태로 리턴
+void clear() : HashMap에 저장된 모든 객체를 제거
+boolean isEmpty() : HashMap이 비어있는지 알려준다
+int size() : HashMap에 저장된 요소의 개수를 리턴
+
+해싱(hashing)
+-> 해시함수(hash function)로 해시테이블(hash table)에 데이터를 검색, 저장
+-> 해시테이블은 배열과 링크드 리스트가 조합된 형태
+-> 해시테이블에 저장된 데이터를 가져오는 과정
+1. 키로 해시함수를 호출해서 해시코드를 얻는다
+2. 해시코드(해시함수의 리턴값)에 대응하는 링크드리스트를 배열에서 찾는다
+3. 링크드리스트에서 키와 일치하는 데이터를 찾는다
+(해시함수는 같은 키에 대해 항상 같은 해시코드를 리턴해야 한다, 서로 다른 키일지라도 같은 값의 해시코드를 리턴할 수 있다)
+
+ex) 환자정보관리 : 환자들의 정보를 출생년도 기준으로 10년씩 나눠서 분류해서 저장함
+72년생 환자 주민번호 72xxxx을 호출함 --(해시함수)--> 70년대 환자정보 서랍(해시코드)을 뒤져 주민번호를 대조
+
+TreeMap
+->이진 검색 트리의 구조로 키와 값의 쌍으로 이루어진 데이터를 저장
+-> TreeSet처럼, 데이터를 정렬(키)해서 저장하기 때문에 저장시간이 길다
+-> 다수의 데이터에서 개별적인 검색은 TreeMap보다 HashMap이 빠르다
+-> Map이 필요할 때 주로 HashMap을 사용하고, 정렬이나 범위검색이 필요한 경우에 TreeMap을 사용
