@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript" src="script/jquery-3.6.0.min.js"></script>
+  <style>
+    .menu{
+        padding: 0;
+        list-style: none;
+        width: 33%;
+        text-align: center;
+    }
+    
+    .menu li > a{
+        text-decoration: none;
+        background-color: #000;
+        color: #fff;
+        display: block;
+        padding: 5px;
+    }
+    .sub_menu{
+        border: 1px solid #000;
+        padding: 5px;
+        display:none;
+        height: 100%;
+    }
+    .sub_menu a{
+        text-decoration: none;
+        display: block; 
+        padding: 5px;
+        color: #000;
+    }
+    .aa{display:inline;}
+   
+</style>
+</head>
+<body>
+  <ul class="menu">
+    <li>
+        <a href="#none">목록</a>
+            <div class="sub_menu">
+              <ul class="menu">
+                <li>
+                <a href="#none" style="display:inline">베스트 셀러</a>
+                <div class="aa">11</div>
+                <div class="aa">22</div>
+                <div class="aa">33</div>
+                </li>
+              </ul>
+              <ul class="menu">
+                <li>
+                <a href="#none">신간 도서</a>
+                  <div class="sub_menu">
+                    <a href="none">고작해야 364일</a>
+                    <a href="none">모던 테일</a>
+                    <a href="none">도시, 청년, 호러</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="menu">
+                <li>
+                <a href="#none">이벤트</a>
+                  <div class="sub_menu">
+                    <a href="none">참여시 100%할인</a>
+                    <a href="none">독후감 이벤트 참여시 책 10권 무료</a>
+                    <a href="none">헌책주면 새책주지</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+    </li>
+</ul>
+  <script>
+    $('.menu li').mouseenter(function(){
+      $(this).children('.sub_menu').stop().slideDown(500);
+  });
+
+  $('.menu li').mouseleave(function(){
+      $(this).children('.sub_menu').stop().slideUp(500);
+  });
+</script>
+</body>
+</html>

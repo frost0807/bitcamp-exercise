@@ -1,0 +1,24 @@
+header{display:flex;justify-content:center;align-items:center;padding:20px 0 20px 0;}
+header form input{width:300px;height:30px;border-style:solid;border-color:coral;}
+#search_bar{height:36px;}
+#upper{margin:0 0 50px 0;border-top:solid;border-color:coral;}
+form{display:inline;}
+#menu_table{font-size:18px;font-weight:bold;color:coral;display:flex;justify-content:center;border-spacing:0px;}
+#menu_table tr td{padding:12px 15px 12px 15px;border:solid 1px;border-bottom:none;border-color:lightgray;margin:none;cursor:pointer;}
+.cl_best{display:none;font-size:12px;}
+nav{border-bottom: solid 2px coral;}
+section{padding:50px 0 40px;margin:0 200px;border-color: coral;}
+#best_list{height:100%;color:coral;font-size:13px;display:inline;float:left;margin-right:20px;}
+#best_list tr td{padding:5px 130px 5px 5px;}
+#best_list tr:nth-child(2) td{font-weight:bold;color:black;padding:10px 130px 10px 15px}
+#best_list tr:first-child td{color:white;background-color: coral;padding-top:10px;padding-bottom:10px;font-size:15px;font-weight:bold;}
+.tab :first-child{display:inline-block;}
+.tab{border-bottom:none;border-top:solid 2px;border-right:solid 2px;border-left:solid 2px;border-color:coral;font-size:13px;color:coral;padding:5px 35px 5px 35px;float:left;}
+select{color:grey;height:25px;}
+select:first-child{width:75px;}
+select:nth-child(2){width:60px;}
+select:nth-child(3){width:55px;}
+main{margin-top:30px;}
+#period_search{background-color: coral;padding:5px 20px 5px 25px;font-size:12px;color:white;border:none;}
+p{font-size:15px;color:coral}
+article{border:1px solid;border-color: lightgray;float:left;width:700px;padding:15px 100px 15px 30px}
