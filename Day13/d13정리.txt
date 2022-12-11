@@ -1,0 +1,23 @@
+MVC 디자인 패턴(설계기법)
+
+M(odel) : 데이터(객체배열)
+V(iew) : HTML
+C(ontroller) : JavaScript(JAVA, JSP)
+
+데이터를 조작하는 방법(CRUD)
+Create/Read/Update/Delete
+
+document.write(); : 출력하다 문제가 생기면 종료해버림(스크립트 중단됨)
+js -> 객체 전체 출력방법 : alert(JSON.stringfy(객체이름)); 그냥 객체이름으로 찍으면 [object Object]로만 나옴
+
+js -> console.log(); 브라우저 콘솔(F12)에 출력하는 함수
+
+Ctrl+Space : 자동완성
+
+----------------------------------------------
+
+Mysql
+
+데이터 베이스란?(지금까지 사용했던 회원정보같은 것들을 체계적으로 관리할 수 있는 것)
+@필수적인 용어들 : Database/Table/Field/Column/Record
+@데이터베이스의 종류 : Oracle, MySQL, MiriaDB, SQLite, MSSQL, PostgreSQL
