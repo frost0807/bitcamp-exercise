@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .info{height:30px;font-size:15px;border:none;}
+        .button1{height:30px;border:none;background-color: coral;border-radius:5px;color:white;}
+    </style>
+    <script defer type="text/javascript" src="test.js?ver=1"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <form action="signup.php" method="post" name="signup" onsubmit="return signup_process()">
+            <input type="text" id="name_val" class="info" name="n_name" placeholder="이름"><br>
+            <input type="text" id="id_val" class="info" name="n_id" placeholder="아이디"><br>
+            <input type="password" id="pw_val" class="info" name="n_pw" placeholder="비밀번호"><br>
+            <input type="password" id="pwcheck_val" class="info" name="n_pwcheck" placeholder="비밀번호 확인"><br>
+            <input type="email" id="mail_val" class="info" name="n_mail" placeholder="이메일"><br>
+            <input type="phone" id="phone_val" class="info" name="n_phone" placeholder="연락처"><br>
+            <input type="address" id="address_val" class="info" name="n_address" placeholder="주소"><br>
+            <input type="submit" id="submit_button" class="button1" value="가입하기"><br><br>
+        </form>
+        <button type="button" class="button1" onclick="document.getElementById('print').innerHTML=get_user_info()">방금 가입한 회원정보 출력</button><br><br>
+        <input type="text" id="nn" class="info" placeholder="N입력 0~"><br>
+        <button type="button" class="button1" onclick="document.getElementById('print').innerHTML=get_Nth_user_info()">N번째 회원정보 출력</button><br><br>
+        <input type="text" id="search_id" class="info" placeholder="검색할 아이디"><br>
+        <button type="button" class="button1" onclick="document.getElementById('print').innerHTML=searching_id()">검색하기</button><br>
+        <p id="print"></p>
+    </section>
+</body>
+</html>
