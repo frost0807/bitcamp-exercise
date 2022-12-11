@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script defer type="text/javascript" src="script/test.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png"><br>
+    </header>
+    <div>
+        <p>간편 회원가입</p>
+    </div>
+    <section>
+        <form method="POST" action="filter.php" onsubmit="return check_id();">
+            <input type="text" name="user_id" id="user_id_1" placeholder="ID 입력"><br>
+            <input type="password" name="user_pw" id="user_pw_1" placeholder="비밀번호 입력"><br>
+            <input type="password" name="user_pw_check" id="user_pw_check_1" placeholder="비밀번호 확인"><br>
+            <input type="email" name="user_mail" id="user_mail_1" placeholder="이메일 입력"><br>
+            <input type="submit" id="submit_button" value="전송">
+        </form>
+    </section>
+</body>
+</html>
